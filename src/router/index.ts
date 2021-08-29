@@ -31,15 +31,21 @@ addRouter(router)
 
 router.beforeEach((to) => {
   const token = localCache.getCache('blog-token')
+
   //  if (to.path !== '/login') {
-  if (!token) {
-    return '/login'
-  }
-  if (to.path === '/login') {
-    if (token) {
-      return '/back-all'
+
+  // if (to.path === '/login') {
+  //   if (token) {
+  //     return '/back-all'
+  //   }
+  // }
+
+  if (to.path.includes('/back-all/')) {
+    if (!token) {
+      return '/login'
     }
   }
+
   //  } else {
   // if (token) {
   //   return '/back-all'

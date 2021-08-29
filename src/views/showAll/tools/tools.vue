@@ -27,6 +27,7 @@ export default defineComponent({
 
 <style scoped>
 .tools {
+  height: 700px;
   display: flex;
 }
 </style>

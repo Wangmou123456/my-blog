@@ -43,7 +43,9 @@ const backModule: Module<IBackState, IRootState> = {
     async editPageDataAction({ dispatch }, payload: any) {
       const { pageName, editData, id } = payload
       const pageUrl = `${pageName}/${id}`
+
       await editPageData(pageUrl, editData)
+
       // 3 重新请求数据
       dispatch(
         'getPageListAction',

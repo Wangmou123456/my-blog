@@ -1,4 +1,5 @@
 import RequestServe from './request'
+import router from '@/router'
 import { BASE_URL, TIME_OUT } from './request/config'
 
 import localCache from '@/utils/cache'
@@ -32,6 +33,15 @@ export const backRequest = new RequestServe({
     },
     responseInterceptor: (config) => {
       // console.log('响应成功的拦截')
+      switch (config.data.status) {
+        case 401:
+          localCache.deleteCache('blog-token')
+          router.replace('/login')
+          break
+
+        default:
+          break
+      }
       return config.data
     }
   }

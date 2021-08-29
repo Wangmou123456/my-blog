@@ -75,8 +75,6 @@ export default defineComponent({
       dialogVisible.value = false
       if (Object.keys(props.defaultInfo).length) {
         if (props.defaultInfo.options) {
-          console.log(formData.value)
-
           store
             .dispatch('back/editPageDataById', {
               pageName: props.pageName,

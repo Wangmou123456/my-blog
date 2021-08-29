@@ -24,7 +24,7 @@
         </template>
 
         <template v-if="tit">
-          <li class="lis-five">
+          <li class="lis-five gradient-bg">
             {{ tit }}
           </li>
         </template>
@@ -173,6 +173,29 @@ export default defineComponent({
   cursor: pointer;
   background-color: #fff;
   border-radius: 30px;
+}
+
+.gradient-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f66, #f90, #3c9, #09f, #66f) left
+    center/400% 400%;
+  font-weight: bold;
+  font-size: 100px;
+  color: #fff;
+  animation: move 10s infinite;
+}
+@keyframes move {
+  0%,
+  100% {
+    background-position-x: left;
+  }
+  50% {
+    background-position-x: right;
+  }
 }
 </style>
 

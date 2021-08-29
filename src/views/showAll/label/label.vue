@@ -26,6 +26,7 @@ export default defineComponent({
 
 <style scoped>
 .label {
+  height: 700px;
   display: flex;
 }
 </style>

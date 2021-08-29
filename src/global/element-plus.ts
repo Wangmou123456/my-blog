@@ -29,7 +29,8 @@ import {
   ElAside,
   ElDialog,
   ElSelect,
-  ElOption
+  ElOption,
+  ElFooter
 } from 'element-plus'
 
 const components = [
@@ -61,7 +62,8 @@ const components = [
   ElDialog,
   ElRow,
   ElSelect,
-  ElOption
+  ElOption,
+  ElFooter
 ]
 
 export default function (app: App): void {

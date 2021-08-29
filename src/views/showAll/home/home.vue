@@ -55,6 +55,7 @@ export default defineComponent({
 
 <style lang="less" scoped>
 .home {
+  min-height: 700px;
   display: flex;
 }
 </style>
